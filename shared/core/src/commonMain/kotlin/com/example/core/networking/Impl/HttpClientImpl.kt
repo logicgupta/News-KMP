@@ -1,10 +1,10 @@
 package com.example.core.networking.Impl
 
+import com.example.core.CoreBuildKonfig
 import com.example.core.logger.api.LoggerApi
 import com.example.core.networking.api.HttpClientAPI
 import com.example.core.networking.api.HttpEngineProvider
 import com.example.core.networking.util.NetworkConstants
-import com.example.core_network.CoreBuildKonfig
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation

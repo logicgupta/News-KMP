@@ -66,7 +66,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
-val modulePackageName = "com.example.core_network"
+val modulePackageName = "com.example.core"
 
 buildkonfig {
     packageName = modulePackageName
@@ -75,9 +75,9 @@ buildkonfig {
     defaultConfigs {
         buildConfigField(FieldSpec.Type.BOOLEAN, "IS_DEBUG", "true")
 
-        buildConfigField(FieldSpec.Type.STRING, "BASE_URL", "http://eventregistry.org/api/v1/")
+        buildConfigField(FieldSpec.Type.STRING, "BASE_URL", "https://www.newsapi.ai/api/v1")
 
-        buildConfigField(FieldSpec.Type.STRING, "API_KEY", "6f97b0cd-daa7-49a0-9da9-fc40830be6c9")
+        buildConfigField(FieldSpec.Type.STRING, "API_KEY", "")
     }
 
     defaultConfigs("debug") {
