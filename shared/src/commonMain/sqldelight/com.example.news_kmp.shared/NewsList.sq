@@ -1,0 +1,21 @@
+CREATE TABLE NewsItem  (
+  id INTEGER NOT NULL PRIMARY KEY  AUTOINCREMENT ,
+  lang TEXT NOT NULL,
+  title TEXT NOT NULL,
+  body TEXT NOT NULL,
+  image TEXT ,
+  url TEXT
+);
+
+insertNewsItem:
+INSERT OR REPLACE INTO NewsItem(lang,title, body,image,url)
+VALUES (?,?,?,?,?);
+
+fetchNew:
+SELECT * FROM NewsItem;
+
+deleteAllNewsItem:
+DELETE FROM NewsItem WHERE id = ?;
+
+fetchTotalItemCountForNewsID:
+SELECT COUNT(*) FROM NewsItem WHERE  id = ?;

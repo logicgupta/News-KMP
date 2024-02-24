@@ -1,5 +1,4 @@
 import com.codingfeline.buildkonfig.compiler.FieldSpec
-import org.apache.tools.ant.util.JavaEnvUtils.VERSION_11
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -39,6 +38,11 @@ kotlin {
             implementation(libs.koin.core)
             // moko-common
             implementation(libs.bundles.moko.common)
+            // multiplatform storage settings
+            implementation(libs.multiplatform.settings)
+            implementation(libs.multiplatform.settings.couroutine)
+            // Kotlin DateTime
+            implementation(libs.kotlin.datetime)
 
         }
         commonTest.dependencies {

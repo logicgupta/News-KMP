@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.sql.delight)
 }
 
 android {

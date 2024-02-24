@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.sql.delight)
+    alias(libs.plugins.ktlint)
 }
 
 kotlin {
@@ -27,7 +29,8 @@ kotlin {
     ).forEach {
         it.binaries.framework {
             baseName = "shared"
-            isStatic = true
+            isStatic = false
+            linkerOpts.add("-lsqlite3")
         }
     }
 
@@ -55,6 +58,15 @@ kotlin {
             implementation(libs.bundles.moko.common)
             // kamelImage Loading
             implementation(libs.kamel)
+            //sql-delight-coroutines
+            implementation(libs.bundles.sqldelight.common)
+            // store
+            implementation(libs.store)
+            // multiplatform storage settings
+            implementation(libs.multiplatform.settings)
+            implementation(libs.multiplatform.settings.couroutine)
+            // Kotlin DateTime
+            implementation(libs.kotlin.datetime)
 
         }
         commonTest.dependencies {
@@ -65,7 +77,15 @@ kotlin {
             api(compose.preview)
             // coil
             implementation(libs.coil)
+            //sql-delight
+            implementation(libs.android.sqldelight)
         }
+
+        iosMain.dependencies {
+            //sql-delight
+            implementation(libs.ios.sqldelight)
+        }
+
     }
 }
 
@@ -82,4 +102,13 @@ android {
 }
 dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+}
+
+sqldelight {
+    databases {
+        create("NewsDatabase") {
+            packageName.set("com.example.news_kmp.shared")
+        }
+        linkSqlite = true
+    }
 }

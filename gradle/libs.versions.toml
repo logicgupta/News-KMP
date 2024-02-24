@@ -25,6 +25,11 @@ moko-mvvm = "0.16.1"
 coil = "2.5.0"
 kamel = "0.9.1"
 lifecycleViewmodelCompose = "2.7.0"
+sqldelight = "2.0.1"
+store5 = "5.0.0"
+storageSettings = "1.1.1"
+kotlin-datetime = "0.5.0"
+ktlint-gradle = "12.1.0"
 
 
 [libraries]
@@ -40,6 +45,7 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 build-konfig = { module = "com.codingfeline.buildkonfig:buildkonfig-gradle-plugin", version.ref = "build-konfig" }
 compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+kotlin-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlin-datetime" }
 
 ## Ktor
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
@@ -82,6 +88,20 @@ coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 kamel = { module = "media.kamel:kamel-image", version.ref = "kamel" }
 androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
 
+##  SQL Delight
+android-sqldelight = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
+ios-sqldelight = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
+jvm-sqldelight = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
+sqldelight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqldelight" }
+sql-delight-coroutines = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+
+## Store5 https://mobilenativefoundation.github.io/Store/
+store = { module = "org.mobilenativefoundation.store:store5", version.ref = "store5" }
+
+## Multiplatform settings https://github.com/russhwolf/multiplatform-settings
+multiplatform-settings = { module = "com.russhwolf:multiplatform-settings-no-arg", version.ref = "storageSettings" }
+multiplatform-settings-couroutine = { module = "com.russhwolf:multiplatform-settings-coroutines", version.ref = "storageSettings" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
@@ -94,6 +114,8 @@ build-konfig = { id = "com.codingfeline.buildkonfig" }
 ## moko
 mokoResources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+sql-delight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint-gradle" }
 
 
 [bundles]
@@ -119,4 +141,9 @@ moko-common = [
     "moko-mvvm-compose",
     "moko-mvvm-flow",
     "moko-mvvm-flow-compose"
+]
+
+sqldelight-common = [
+    "sqldelight-runtime",
+    "sql-delight-coroutines"
 ]

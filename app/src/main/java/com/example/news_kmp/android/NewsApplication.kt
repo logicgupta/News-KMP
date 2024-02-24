@@ -2,6 +2,7 @@ package com.example.news_kmp.android
 
 import android.app.Application
 import com.example.news_kmp.android.di.viewModelModule
+import com.example.news_kmp.di.androidSharedModule
 import com.example.news_kmp.sharedModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -14,6 +15,7 @@ class NewsApplication : Application() {
         startKoin {
             androidContext(this@NewsApplication)
             androidLogger()
+            modules(androidSharedModule)
             modules(sharedModule())
             modules(viewModelModule)
         }
