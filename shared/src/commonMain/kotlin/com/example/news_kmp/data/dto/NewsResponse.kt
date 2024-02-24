@@ -14,7 +14,7 @@ data class NewsSubResponse(
 
 @Serializable
 data class NewsResults(
-    val lang: String, val title: String, val body: String, val image: String?
+    val lang: String, val title: String, val body: String, val image: String?, val url: String
 )
 
 

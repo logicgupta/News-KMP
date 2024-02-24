@@ -34,14 +34,15 @@
     - [Repository Pattern](https://proandroiddev.com/the-real-repository-pattern-in-android-efba8662b754)
 
 - [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
-- [Ktor](https://github.com/ktorio/ktor/tree/main): HTTP Client Franework for REST Apis.
+- [Ktor](https://github.com/ktorio/ktor/tree/main): HTTP Client Framework for REST Apis.
 - [Kotlinx.serialization](https://github.com/square/moshi/): A modern JSON serialization library for Kotlin.
 - [Kamel](https://github.com/Kamel-Media/Kamel): Loading and caching images images from network (Android and IOS).
 - [Kermit](https://github.com/touchlab/Kermit): Multiplatform centralized logging utility.
-- [Moko](https://github.com/icerockdev/moko): Multiplatform library for managing resourses and MVVM
+- [Moko](https://github.com/icerockdev/moko): Multiplatform library for managing resources and MVVM
 - [BuildKonfig](https://github.com/yshrsmz/BuildKonfig): BuildConfig for Kotlin Multiplatform Project + Product Flavour in Shared Module
 - [Koin](https://github.com/InsertKoinIO/koin) : A pragmatic lightweight dependency injection framework for Kotlin & Kotlin Multiplatform
 - [Jetbrains Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform) A declarative framework for sharing UIs across multiple platforms with Kotlin
+- [SQLDelight](https://cashapp.github.io/sqldelight) Multiplatform library for storing data locally in SQL lite Database
 
 ----
 
